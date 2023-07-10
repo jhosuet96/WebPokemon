@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { PokemonList } from '../components';
+import { PokemonContext } from '../context/PokemonContext';
 
-const HomePage = () => {
-  return (
-    <div>
-      <h1>HomePage</h1>
-    </div>
-  )
-}
+export const HomePage = () => {
 
-export default HomePage
+    const {setUrl, setPokemons,nextUrl,prevUrl} = useContext(PokemonContext)
+	return (
+		<>
+          <PokemonList />
+                <div className="container-btn-load-more container">
+                  <div>
+                    {  prevUrl && <button  className="btn btn-prev" onClick={()=>{
+                        setPokemons([])
+                        setUrl(prevUrl) 
+                    }}>Previous</button>}
+
+                    { nextUrl && <button className='btn btn-netx' onClick={()=>{
+                        setPokemons([])
+                        setUrl(nextUrl)
+                    }}>Next</button>}
+
+                  </div>
+                
+                </div>
+		</>
+	);
+};
