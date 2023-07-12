@@ -1,7 +1,8 @@
 import React from 'react';
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Navigation } from './components/Navigation';
-import { HomePage, SearchPage } from './pages';
+import { HomePage } from './pages/HomePage';
+import {SearchPage} from './pages/SearchPege'
 
 
 export const AppRouter = () => {

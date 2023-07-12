@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { CardPokemon } from '../components';
+import { CardPokemon } from '../components/CardPokemon';
 import { PokemonContext } from '../context/PokemonContext';
 import { Pokeinfo } from '../pages/Pokeinfo';
 
