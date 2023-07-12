@@ -44,7 +44,6 @@ body {
 }
 .containerAll {
 	max-width: 95%;
-	margin-top: 30px;
 }
 
 
@@ -72,10 +71,10 @@ header form {
 	display: flex;
 	align-items: center;
 	gap: 10px;
-
+    margin-left: 4rem;
 	border: 1px solid #555;
 	padding: 15px 20px;
-	border-radius:  25px 0px  0px 25px 
+	border-radius:  25px 0px  0px 25px
 
 }
 
@@ -138,11 +137,17 @@ header form {
 	grid-template-columns: repeat(6, 1fr);
 	gap: 10px;
 }
+/* 
+.card-list-pokemon.container{
+	margin-left: 1px;
+} */
 
 .left-content,.right-content{
     flex-basis: 50%;
 }
-
+.right-content {
+    width: 900px;
+}
 .card-pokemon {
 	cursor: pointer;
 	text-decoration: none;
@@ -308,10 +313,10 @@ header form {
 	cursor: pointer;
 }
 
-/* 
-======================================= 
+/*
+=======================================
 Styles of Pokemon Single Page
-======================================= 
+=======================================
 */
 
 .main-pokemon {
@@ -331,7 +336,7 @@ Styles of Pokemon Single Page
 }
 
 .number-pokemon {
-	
+
 	font-size: 150px;
 	font-weight: 700;
 	color: var(--color-primary-hover);
@@ -343,7 +348,8 @@ Styles of Pokemon Single Page
 	flex: 1;
 	padding:  0px;
 	height: 300px;
-	
+    width: 500px;
+
 }
 
 .container-img-pokemon img {
@@ -372,7 +378,7 @@ Styles of Pokemon Single Page
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
-	
+
 
 }
 
@@ -394,7 +400,7 @@ Styles of Pokemon Single Page
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	flex: 1;	
+	flex: 1;
 }
 
 .stat-group {
@@ -421,7 +427,7 @@ Styles of Pokemon Single Page
 	border-radius: 10px;
 	margin-right: 10rem;
 }
- 
+
 .progress-bar {
     height: 100%;
     background:  var(--color-primary);
@@ -430,7 +436,7 @@ Styles of Pokemon Single Page
     transition: width 0.25s;
     border-radius: 5px;
 }
- 
+
 .progress-bar-text {
     margin-left: 10px;
     font-weight: bold;
@@ -459,11 +465,7 @@ Styles of Pokemon Single Page
 /* Btn Load More */
 
 .container-btn-load-more{
-	display: flex;
-	justify-content: center;
-
-	margin-bottom: 20px;
-	margin-top: 20px;
+	justify-content: start;
 }
 
 .btn-load-more{
@@ -477,11 +479,11 @@ Styles of Pokemon Single Page
 }
 
 .btn-netx{
-	margin-left: 11rem;
+	margin-left: 1rem;
 }
 
 .btn-prev{
-	margin-right: 8rem;
+	margin-right: 1rem;
 }
 
 .btn{
@@ -492,23 +494,23 @@ Styles of Pokemon Single Page
 	color: #fff;
 	border-radius: 10px;
 	cursor: pointer;
-	position:fixed;
+	/* position:static;
 	bottom: 90px;
-	left: 500px;
+	left: 100px; */
 	transition: all 300ms ease 0ms;
 	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover{
 	background-color: var(--color-primary-hover);
-	color: #000;	
+	color: #000;
 	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
 	transform: translateY(-7px);
 }
 .dropdown {
 	position: relative;
 }
-  
+
 .dropdown-menu {
 	position: absolute;
 	margin-left: 20px;
@@ -519,74 +521,84 @@ Styles of Pokemon Single Page
 	border-radius: 4px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	padding: 0;
-	margin-top: 26px;  
+	margin-top: 26px;
 }
-  
-  .dropdown-menu li {
-	list-style: none;
-	padding: 8px 12px;
-	cursor: pointer;
-  }
-  
-  .dropdown-menu li:hover {
-	background-color: #f5f5f5;
-  }
-  
-  .dropdown-menu li:first-child {
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
-  }
-  
-  .dropdown-menu li:last-child {
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
-  }
-  
-  .table {
-	display:contents;
-	flex-direction: column;
-	align-items: flex-end;
 
-  }
-  
-  .row {
-	display: table-row;
-  }
-  .th{
-	font-weight: 700;
-	width: 50%;
-	text-align: center;
-  }
-
-  .cell {
-	display: table-cell;
-	padding: 8px;
-	border: 1px solid #ccc;
-  }
-
-  .btnTable{
-	margin: 0.5rem;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-	padding: 10px 10px;
-    font-family: inherit;
-    color: #fff;
-    background-color: var(--color-primary);
-    cursor: pointer;
-    font-weight: 500;
-    letter-spacing: 2px;
-	justify-content: space-between;
-	transition: all 300ms ease 0ms;
-
-  }
-  .btnTable:hover{
-	background-color: var(--color-primary-hover);
-	color: #000;	
-	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
-	transform: translateY(-1px);
+.dropdown-menu li {
+list-style: none;
+padding: 8px 12px;
+cursor: pointer;
 }
-  .derecha {
-    padding-top: 48rem;
-    margin-left: -25rem;
+
+.dropdown-menu li:hover {
+background-color: #f5f5f5;
+}
+
+.dropdown-menu li:first-child {
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+}
+
+.dropdown-menu li:last-child {
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+}
+
+.table {
+display:contents;
+flex-direction: column;
+align-items: flex-end;
+}
+
+.row {
+display: table-row;
+}
+
+.th{
+font-weight: 700;
+width: 300px;
+text-align: center;
+}
+
+.cell {
+display: table-cell;
+padding: 8px;
+border: 1px solid #ccc;
+}
+
+.derecha {
+	margin-left: 4rem;
+}
+
+.btnTable{
+margin: 0.5rem;
+border: none;
+outline: none;
+border-radius: 5px;
+padding: 10px 10px;
+font-family: inherit;
+color: #fff;
+background-color: var(--color-primary);
+cursor: pointer;
+font-weight: 500;
+letter-spacing: 2px;
+transition: all 300ms ease 0ms;
+}
+
+.btnTable:hover{
+background-color: var(--color-primary-hover);
+color: #000;
+box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+transform: translateY(-1px);
+}
+.pagination{
+	padding-left: 11rem;
+}
+
+@media (max-width: 400px) {
+  .div-movido {
+    position: relative;
+    top: 810px;
+    right: 750px;
   }
+}

@@ -45,46 +45,52 @@ export const PokemonList = () => {
             </div>
           )}
         </div>
-        <div className="right-content">
-          <Pokeinfo data={pokeDex} />
-        </div>
- 
+        <div className="div-movido">
+          <div className="right-content">
+            <Pokeinfo data={pokeDex} />
+          
 
-        <div  className="derecha">
-          <div className="table">
-            <div className="row">
-              <div className="cell th">Letra</div>
-              <div className="cell th">Cantidad</div>
+          <div className="derecha">
+            <div className="table">
+              <div className="row">
+                <div className="cell th">Letra</div>
+                <div className="cell th">Cantidad</div>
+              </div>
+              {currentPageData.map((initial, index) => {
+                const count = globalPokemons.filter(
+                  (pokemon) => pokemon.name[0].toUpperCase() === initial
+                ).length;
+                return (
+                  <div className="row" key={index}>
+                    <div className="cell">{initial}</div>
+                    <div className="cell">{count}</div>
+                  </div>
+                );
+              })}
             </div>
-            {currentPageData.map((initial, index) => {
-              const count = globalPokemons.filter(
-                (pokemon) => pokemon.name[0].toUpperCase() === initial
-              ).length;
-              return (
-                <div className="row" key={index}>
-                  <div className="cell">{initial}</div>
-                  <div className="cell">{count}</div>
-                </div>
-              );
-            })}
-          </div>
 
-          <div className="pagination">
-            <button className="btnTable"
-              disabled={currentPage === 1}
-              onClick={() => setCurrentPage(currentPage - 1)}
-            >
-              Previus
-            </button>
-            <span style={{fontFamily:"inherit", fontWeight:'700'}}>{currentPage}</span>
-            <button className="btnTable" 
-              disabled={currentPage === totalPages}
-              onClick={() => setCurrentPage(currentPage + 1)}
-            >
-              Next
-            </button>
+            <div className="pagination">
+              <button
+                className="btnTable"
+                disabled={currentPage === 1}
+                onClick={() => setCurrentPage(currentPage - 1)}
+              >
+                Previus
+              </button>
+              <span style={{ fontFamily: "inherit", fontWeight: "700" }}>
+                {currentPage}
+              </span>
+              <button
+                className="btnTable"
+                disabled={currentPage === totalPages}
+                onClick={() => setCurrentPage(currentPage + 1)}
+              >
+                Next
+              </button>
+            </div>
           </div>
-        </div>  
+          </div>
+        </div>
       </div>
     </>
   );

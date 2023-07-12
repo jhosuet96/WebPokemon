@@ -25,7 +25,7 @@ export const SearchPage = () => {
   return (
 	<>
 		<div className='container'>
-		<div className="left-content">
+        <div className="left-content" style={{ overflowY:'auto', maxHeight: '990px', maxWidth:'925px'}}>
 			<p className='p-search'>
 			Se encontraron <span>{uniquePokemons.length}</span> resultados:
 			</p>
